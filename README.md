@@ -1,0 +1,1 @@
+## Vicgital.Infrastructure.Logging  
