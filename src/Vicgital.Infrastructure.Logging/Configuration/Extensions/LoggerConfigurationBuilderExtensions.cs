@@ -73,7 +73,7 @@ namespace Vicgital.Infrastructure.Logging.Configuration.Extensions
         public static LoggerConfiguration WriteToFile(this LoggerConfiguration loggerConfiguration, string path, RollingInterval rollingInterval)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(path, nameof(path));
-            return loggerConfiguration.WriteTo.File(path, rollingInterval: rollingInterval);
+            return loggerConfiguration.WriteTo.File(new Serilog.Formatting.Json.JsonFormatter(), path, rollingInterval: rollingInterval);
         }
 
     }

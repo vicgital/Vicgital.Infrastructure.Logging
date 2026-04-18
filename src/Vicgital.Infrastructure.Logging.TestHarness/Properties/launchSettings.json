@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Vicgital.Infrastructure.Logging.TestHarness": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
