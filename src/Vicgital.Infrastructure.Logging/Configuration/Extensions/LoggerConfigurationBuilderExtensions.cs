@@ -52,14 +52,14 @@ namespace Vicgital.Infrastructure.Logging.Configuration.Extensions
         /// <param name="loggerConfiguration">The logger configuration to which the Application Insights sink will be added.</param>
         /// <param name="appInsightsConnectionString">The connection string for the Azure Application Insights resource. Cannot be null or whitespace.</param>
         /// <returns>The logger configuration with Application Insights logging enabled.</returns>
-        public static LoggerConfiguration WriteToApplicationInsights(this LoggerConfiguration loggerConfiguration, string appInsightsConnectionString) 
+        public static LoggerConfiguration WriteToApplicationInsights(this LoggerConfiguration loggerConfiguration, string appInsightsConnectionString)
         {
             ArgumentException.ThrowIfNullOrWhiteSpace(appInsightsConnectionString, nameof(appInsightsConnectionString));
             return loggerConfiguration.WriteTo.ApplicationInsights(appInsightsConnectionString, TelemetryConverter.Traces);
         }
 
 
-        
+
         /// <summary>
         /// Configures the logger to write log events to a file at the specified path with the given rolling interval.
         /// </summary>
